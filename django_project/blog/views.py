@@ -1,28 +1,17 @@
-from turtle import title
 from django.shortcuts import render
-
-posts = [
-    {
-        'author': 'John Doe',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'July 11, 2022'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'July 12, 2022'
-    }
-]
+from .models import Post
 
 
+# Blog home page route
 def home(request):
+    # Calls all blog posts from database and passes it into the posts key to
+    # the page via Jinja
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
 
+# Blog about page route
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
