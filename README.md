@@ -1,5 +1,6 @@
 # Django Tutorial
 
+## Links
 * [Link to the YouTube tutorial series](https://www.youtube.com/watch?v=UmljXZIypDc&list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p&index=1)
 * [Link to the code snippets as seen in the videos](https://github.com/CoreyMSchafer/code_snippets/tree/master/Django_Blog)
 
